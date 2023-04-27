@@ -1,0 +1,39 @@
+{
+    "workbench.colorCustomizations": {
+        // 層級括號顏色，從 1 至 6 層，此處只設定了 5 層
+        "editorBracketHighlight.foreground1": "#7777ff",
+        "editorBracketHighlight.foreground2": "#8a2be2",
+        "editorBracketHighlight.foreground3": "#DC143C",
+        "editorBracketHighlight.foreground4": "#5eaaa8",
+        "editorBracketHighlight.foreground5": "#800080",
+        // 異常括號的顏色，比如多出來的結尾括號
+        "editorBracketHighlight.unexpectedBracket.foreground": "#ffffff"
+    },
+    "workbench.colorTheme": "Tomorrow Night Eighties",
+    "workbench.iconTheme": "file-icons",
+    "workbench.startupEditor": "none",
+
+    "editor.fontSize": 16,
+
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true
+    },
+
+    "black-formatter.args": [
+        "--line-length=100",
+        "--skip-string-normalization"
+    ],
+    "flake8.args": [
+        "--max-line-length=100",
+        "--ignore=E131,E302"
+    ],
+    "isort.args": [
+        "--src=${workspaceFolder}",
+        "--line-length=100",
+    ]
+}
